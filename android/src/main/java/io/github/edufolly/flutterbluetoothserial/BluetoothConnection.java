@@ -64,7 +64,7 @@ public abstract class BluetoothConnection
         BluetoothAdapter btAdapter = BluetoothAdapter.getDefaultAdapter();
         BluetoothDevice device = btAdapter.getRemoteDevice(address);
         ParcelUuid[] uuids = (ParcelUuid[]) device.getUuids();
-        System.out.println("Try Connect:", uuids[0].getUuid(),address);
+        Log.d(TAG, "Try Connect: " +  uuids[0].getUuid() + address);
         connect(address, uuids[0].getUuid());
     }
     
